@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const API_URL = process.env.API_URL
 
 module.exports = {
     mode: 'development',
@@ -23,7 +24,7 @@ module.exports = {
     externals: {
         // global app config object
         config: JSON.stringify({
-            apiUrl: 'http://api.soliddevops.tech'
+            apiUrl: API_URL
         })
     }
 }
